@@ -35,7 +35,7 @@ function renderizarProductos(lista) {
         
         tarjeta.innerHTML = `
             <div class="card h-100">
-                <img src="${producto.img}" class="card-img-top" alt="${producto.nombre}">
+                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                 <div class="card-body">
                     <h5 class="card-title">${producto.nombre}</h5>
                     <p class="card-tex">${producto.categoria}</p>
