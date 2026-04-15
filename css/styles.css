@@ -67,6 +67,17 @@ footer {
     opacity: 0.8;
 }
 
+.efecto-card{
+    transition: transform 0.3s;
+}
+
+.efecto-card:hover{
+    transform: scale(1.05);
+}
+
+.card{
+    cursor: pointer;
+}
 
 .carousel-caption {
     top: 10%;
