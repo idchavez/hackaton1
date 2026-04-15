@@ -112,10 +112,10 @@ function agruparCompra() {
         listaCompra.innerHTML = '<li class="list-group-item">Tu compra está vacía</li>';
         if (totalSpan) totalSpan.textContent = '$0';
         return;
-}
+    }
 
-let html = '';
-let total = 0;
+    let html = '';
+    let total = 0;
     compra.forEach(item => {
         const subtotal = item.precio * item.cantidad;
         total += subtotal;
@@ -144,3 +144,22 @@ function vaciarCompra() {
         guardarCompra();
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    agruparProductos();
+    cargarCompra();
+
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('agregar-compra')) {
+            const id = parseInt(e.target.dataset.id);
+            const nombre = e.target.dataset.nombre;
+            const precio = parseInt(e.target.dataset.precio);
+            agregarCompra(id, nombre, precio);
+        }
+    });
+
+    const btnVaciar = document.getElementById('vaciar-Compra');
+    if (btnVaciar) {
+        btnVaciar.addEventListener('click', vaciarCompra);
+    }
+});
