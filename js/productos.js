@@ -1,6 +1,6 @@
 //creamos el array de objetos que seran los productos
 const arrayProductos = [
-   { id: 1, nombre: "Balón Profesional", precio: 120000, imagen: "assets/Balón Profesional.png", categoria: "baloncesto", descripcion: "Balón oficial de baloncesto, tamaño 7." },
+   { id: 1, nombre: "Balón Profesional", precio: 120000, imagen: "./assets/Balón Profesional.png", categoria: "baloncesto", descripcion: "Balón oficial de baloncesto, tamaño 7." },
     { id: 2, nombre: "Camiseta Jordan", precio: 85000, imagen: "assets/Camiseta Jordan.png", categoria: "baloncesto", descripcion: "Camiseta réplica de la leyenda del baloncesto." },
     { id: 3, nombre: "Zapatillas NBA", precio: 210000, imagen: "assets/Zapatillas NBA.png", categoria: "baloncesto", descripcion: "Zapatillas de alto rendimiento." },
     { id: 4, nombre: "Red de Baloncesto", precio: 45000, imagen: "assets/Red de Baloncesto.png", categoria: "baloncesto", descripcion: "Red resistente para cancha." },
@@ -56,5 +56,21 @@ function renderizarProductos(lista) {
        
    
     });
+    contenedorProductos.addEventListener("click", function(e) {
+    if (e.target.classList.contains("btn-agregar")) {
+        const boton = e.target;
+        const nombre = boton.dataset.nombre;
+        const precio = Number(boton.dataset.precio);
+
+        agregarAlcarrito(nombre, precio);
+    }
+});
+function actilizarCarrito(){
+   
+    let contadorCorrito = document.getElementById("badge"); 
+    if(contadorCorrito) {
+        contadorCorrito.textContent = cantidadProductos;
+    }
+}
 }//Llamamos a la funcion para que nos renderice todo el array
 renderizarProductos(arrayProductos);
