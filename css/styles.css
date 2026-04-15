@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 /*background: linear-gradient(#790379, #2a0cb1);*/
+=======
+.efecto-card{
+    transition: transform 0.3s;
+}
+
+.efecto-card:hover{
+    transform: scale(1.05);
+}
+
+.card{
+    cursor: pointer;
+}
+>>>>>>> df1a3f890e620034e3ec9ff4d9524a6ebc705e60
