@@ -35,6 +35,11 @@
 
 .navbar-nav li a{
     color: #fff;
+    margin-left: 50px;
+}
+
+.d-flex {
+    margin-right: 50px;
 }
 
 button.navbar-toggler {
