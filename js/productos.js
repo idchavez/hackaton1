@@ -1,4 +1,5 @@
 //creamos el array de objetos que seran los productos
+
 const arrayProductos = [
    { id: 1, nombre: "Balón Profesional", precio: 120000, imagen: "./assets/Balón Profesional.png", categoria: "baloncesto", descripcion: "Balón oficial de baloncesto, tamaño 7." },
     { id: 2, nombre: "Camiseta Jordan", precio: 85000, imagen: "assets/Camiseta Jordan.png", categoria: "baloncesto", descripcion: "Camiseta réplica de la leyenda del baloncesto." },
@@ -22,17 +23,17 @@ const arrayProductos = [
 ];
 
 const contenedorProductos = document.getElementById("contenedor-productos");
-
+ 
 function renderizarProductos(lista) {
    
     contenedorProductos.innerHTML = "";
-
+ 
     // Recorremos el array para que nos cree la tarjeta de cada producto
     lista.forEach((producto) => {
        
         const tarjeta = document.createElement("div");
         tarjeta.className = "col";
-        
+       
         tarjeta.innerHTML = `
             <div class="card h-100">
                 <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
@@ -40,37 +41,21 @@ function renderizarProductos(lista) {
                     <h5 class="card-title">${producto.nombre}</h5>
                     <p class="card-tex">${producto.categoria}</p>
                     <p class="fw-bold text-success">$${producto.precio.toLocaleString()}</p>
-                    <button class="btn btn-primary w-100 btn-agregar" 
+                    <button class="btn btn-primary w-100 btn-agregar"
                 id="btn-${producto.id}"
-                data-nombre="${producto.nombre}" 
+                data-nombre="${producto.nombre}"
                 data-precio="${producto.precio}">
                 Agregar Producto
                     </button>
                 </div>
             </div>
         `;
-
+ 
        //Se agrega la tarjeta al contenedor
         contenedorProductos.appendChild(tarjeta);
-
+ 
        
    
     });
-    contenedorProductos.addEventListener("click", function(e) {
-    if (e.target.classList.contains("btn-agregar")) {
-        const boton = e.target;
-        const nombre = boton.dataset.nombre;
-        const precio = Number(boton.dataset.precio);
-
-        agregarAlcarrito(nombre, precio);
-    }
-});
-function actilizarCarrito(){
-   
-    let contadorCorrito = document.getElementById("badge"); 
-    if(contadorCorrito) {
-        contadorCorrito.textContent = cantidadProductos;
-    }
-}
 }//Llamamos a la funcion para que nos renderice todo el array
 renderizarProductos(arrayProductos);
