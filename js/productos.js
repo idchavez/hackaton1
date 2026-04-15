@@ -40,7 +40,7 @@ function renderizarProductos(lista) {
                     <h5 class="card-title">${producto.nombre}</h5>
                     <p class="card-tex">${producto.categoria}</p>
                     <p class="fw-bold text-success">$${producto.precio.toLocaleString()}</p>
-                    <button class="btn btn-primary w-100" 
+                    <button class="btn btn-primary w-100 btn-agregar" 
                 id="btn-${producto.id}"
                 data-nombre="${producto.nombre}" 
                 data-precio="${producto.precio}">

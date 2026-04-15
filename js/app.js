@@ -31,7 +31,7 @@ carrito.forEach(function(producto){
 actilizarCarrito();
 actulizarPrecioTotal();
 
-let botonAgregar = document.querySelectorAll(".btn-agregar");
+let botonAgregar = document.querySelectorAll(".btn-primary");
 
 botonAgregar.forEach(function(boton){   // recorre cada boton 
     boton.addEventListener("click", function(){
