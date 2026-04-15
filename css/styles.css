@@ -35,6 +35,11 @@
 
 .navbar-nav li a{
     color: #fff;
+    margin-left: 50px;
+}
+
+.d-flex {
+    margin-right: 50px;
 }
 
 button.navbar-toggler {
@@ -44,6 +49,16 @@ button.navbar-toggler {
 main {
     min-height: 100vh;
 }
+
+
+.cards-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
 
 footer {
     background: linear-gradient(#790379, #2a0cb1);
