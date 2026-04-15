@@ -1,4 +1,67 @@
-/*background: linear-gradient(#790379, #2a0cb1);*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 6px #008bfd, 
+            0 0 12px #008bfd;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #008bfd, 
+            0 0 20px #008bfd;
+    }
+}
+
+.neon-logo {
+    font-size: 2.5rem;
+    margin: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 
+        0 0 6px #008bfd;
+    animation: neonGlow 2s infinite alternate;
+    text-decoration: none;
+}
+
+.navbar {
+    background: linear-gradient(#790379, #2a0cb1);
+}
+
+.navbar-nav li a{
+    color: #fff;
+}
+
+button.navbar-toggler {
+    background-color: #fff;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer {
+    background: linear-gradient(#790379, #2a0cb1);
+}
+.custom-carousel .carousel-item {
+    height: 450px;
+    background-color: #000;
+
+}
+
+.custom-carousel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.8;
+}
+
 .efecto-card{
     transition: transform 0.3s;
 }
@@ -9,4 +72,28 @@
 
 .card{
     cursor: pointer;
+}
+
+.carousel-caption {
+    top: 10%;
+    bottom: auto;
+    width: auto;
+    max-width: 80%;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-caption h5 {
+color: #2a0cb1;
+font-size: 36px;
+}
+.carousel-caption p {
+color: #fffbfb;
+font-size: 25px;
 }
